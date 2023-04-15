@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/header/Header';
 import LocationBox from './components/locationBox/LocationBox';
+import SearchBox from './components/searchBox/SearchBox';
 import WeatherBox from './components/weatherBox/WeatherBox';
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <div className="App">
       <Header text="Weather Tracker" />
       <LocationBox location="Luton" comment="Mostly sunny this week with light rain" />
+
+      <SearchBox/>
 
       <div style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
 
@@ -18,6 +21,9 @@ function App() {
             <WeatherBox day='Friday' temp='24C'/>
 
       </div>
+
+
+
 
     </div>
   );
