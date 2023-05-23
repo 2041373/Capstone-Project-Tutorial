@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import LocationBox from './components/locationBox/LocationBox';
 import SearchBox from './components/searchBox/SearchBox';
 import WeatherBox from './components/weatherBox/WeatherBox';
+import WindBox from './components/windBox/WindBox';
 
 function App() {
   return (
@@ -22,6 +23,14 @@ function App() {
 
       </div>
 
+      <p style={{color:'white'}}>Visitbility | 10,000</p>
+
+      <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', marginLeft:'10'}}>
+        <WindBox measurement='Wind Speed' value='0.62'/>
+        <WindBox measurement='Wind Deg' value='0.62'/>
+        <WindBox measurement='Wind Gust' value='0.62'/>
+        <WindBox measurement='Wind Speed' value='0.62'/>
+      </div>
 
 
 
