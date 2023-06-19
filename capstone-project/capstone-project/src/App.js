@@ -30,6 +30,8 @@ function App() {
         <WindBox measurement='Wind Deg' value='0.62'/>
         <WindBox measurement='Wind Gust' value='0.62'/>
         <WindBox measurement='Wind Speed' value='0.62'/>
+        <WindBox measurement='Wind Speed' value='0.13'/>
+
       </div>
 
 
