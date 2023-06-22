@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/header/Header';
+import InformationBox from './components/informationBox/InformationBox';
 import LocationBox from './components/locationBox/LocationBox';
 import SearchBox from './components/searchBox/SearchBox';
 import WeatherBox from './components/weatherBox/WeatherBox';
@@ -23,6 +24,10 @@ function App() {
 
       </div>
 
+      <div>
+        <InformationBox/>
+      </div>
+
       <p style={{color:'white'}}>Visitbility | 10,000</p>
 
       <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', marginLeft:'10'}}>
@@ -33,6 +38,8 @@ function App() {
         <WindBox measurement='Wind Speed' value='0.13'/>
 
       </div>
+
+
 
 
 
