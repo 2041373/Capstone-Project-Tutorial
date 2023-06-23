@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-function SearchBox() {
+function SearchBox(props) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleEnterPress = (event) => {
+    if (event.key === 'Enter') {
+      props.onEnterPress(event.target.value); // this is the value of the input
+    }
+  };
+
+  const handleChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding:50 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 50 }}>
       <div style={{ width: '50%', position: 'relative' }}>
         <input
           type='text'
@@ -17,6 +29,9 @@ function SearchBox() {
             height: '50px',
             width: '100%',
           }}
+          value={searchQuery}
+          onChange={handleChange}
+          onKeyDown={handleEnterPress}
         />
         <div
           style={{
